@@ -23,7 +23,6 @@ footer.innerHTML = `
             </div>
             <div class="col">
             <li><a href="/about.html">About us</a></li>
-            <li><a href="/about.html">Register</a></li>
             </div>
         </div>
         </ul>
@@ -34,6 +33,6 @@ footer.innerHTML = `
     <div id="footer_end_bar" class="row sticky-bottom">
     <div class="col-md-4 text-center text-md-start ">Copyright &copy; 2023 All Rights Reserved</div>
     <div class="col-md-4 text-center ">Travel With Us Pte. Ltd</div>
-    <div class="col-md-4 text-center text-md-end"><a href="#">Privacy Policy</a></div>
+
     </div>
 `
