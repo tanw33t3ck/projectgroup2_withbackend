@@ -1,0 +1,26 @@
+[
+    {
+        "title": "Tokyo",
+        "img": "images/artwork/japan.jpg",
+        "description": "Originally a fishing village named Edo, Tokyo emerged into political prominence in 1603, when it became the seat of the Tokugawa shogunate.",
+        "price": 1000
+    },
+    {
+        "title": "London",
+        "img": "images/artwork/london.jpg",
+        "description": "London is the capital and largest city of England and the United Kingdom and stands on the River Thames in south-east England.",
+        "price": 1500
+    },
+    {
+        "title": "China",
+        "img": "images/artwork/japan.jpg",
+        "description": "China is abcde abcde high hello world",
+        "price": 2000
+    },
+    {
+        "title": "San Francisco",
+        "img": "images/artwork/usa.jpg",
+        "description": "Originally a fishing village named Edo, Tokyo emerged into political prominence in 1603, when it became the seat of the Tokugawa shogunate.",
+        "price": 3200
+    }
+]

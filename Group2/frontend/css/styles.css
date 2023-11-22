@@ -1,0 +1,180 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+    font-family: "Roboto", sans-serif !important;
+}
+
+.my_horizon {
+    max-width: 1200px !important;
+    margin: 0 auto;
+    padding: 0 auto;
+}
+
+.modal_simulator {
+    max-width: 1160px !important;
+    margin: 0 auto;
+    padding: 0 auto;
+    min-height: calc(100vh - 116px);
+}
+
+.login_frame {
+    max-width: 720px !important;
+    margin: 0 auto;
+    padding: 0 auto;
+    min-height: calc(100vh - 115px);
+}
+
+/* COMMON COMPONENTS - COMPANY IMAGE */
+main {
+    margin-top: 56px;
+    min-height: calc(100vh - 124px);
+}
+
+#navbarNav {
+    /* background-image: url(/images/artwork/diamond_swatch_light.png); */
+    /* background-repeat: no-repeat; */
+    background-position: 0% 20%;
+    background-size: 55%;
+    font-family: roboto, sans-serif !important;
+}
+
+#navbarNav a:link {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+#navbarSupportedContent {
+    /* background-image: url(/images/artwork/diamond_swatch_light.png); */
+    /* background-repeat: no-repeat; */
+    background-position: 0% 20%;
+    background-size: 55%;}
+
+#footer {
+    width: 100%;
+    font-family: Roboto, 'sans-serif' !important;
+    color: rgba(255, 255, 255, .9) !important;
+    font-weight: normal;
+    /* background-color: rgb(27, 52, 85); */
+
+    background-color: #3d5a80;
+    background-repeat: repeat;
+    font-size: 14px !important;
+}
+
+#footer_top_bar {
+    height: 10px;
+    background-color:rgb(35, 82, 121);
+    background-image: linear-gradient(rgb(35, 82, 121),rgb(27, 69, 104),rgb(35, 82, 121));
+    margin-bottom: 11px;
+}
+
+#collapse_button {
+    position: relative;
+    bottom: 10px;
+    font-size: 20px;
+}
+
+#footer_mid_bar {
+    padding-left: 12px;
+}
+
+#footer_sitemap_ul {
+    list-style: circle;
+}
+
+#footer_sitemap_ul a,
+#footer_contact a,
+#footer_end_bar a {
+    color: rgba(255, 255, 255, .9);
+    text-decoration: none;
+}
+
+#footer_ul a:hover {
+    color: rgba(255, 255, 255, .5)
+}
+
+#footer_end_bar {
+    padding: .8rem 0;
+    background-color: #3d5a80;
+    /* background-image: url(/images/artwork/diamond_swatch_light.png); */
+    /* background-repeat: no-repeat; */
+    background-position: 75% 20%;
+    background-size: 70%;
+}
+
+.bi-arrows-expand {
+    size: 3px;
+    font-size: smaller;
+}
+
+#logo {
+    width: 35px;
+    height: auto;
+    border: 3px solid rgba(255, 255, 255, 0.801);
+    background-color: rgba(108, 138, 114, 0.616);
+    border-radius: 50%;
+}
+
+/* TARGET DOCUMENT ELEMENT - COMPANY DESCRIPTION */
+#history {
+    margin-top: 150px;
+}
+
+#ourteam {
+    margin-top: 30px;
+    text-align: center;
+}
+
+/* shop now button */
+
+#update {
+    display:none;
+}
+
+#shopnowbutton {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background-color: #0000ff;
+}
+
+#shopnowbutton a {
+    background-color: #0000ff;
+    color: white;
+}
+
+/* TOP BANNER SECTION */
+#header {
+    background-image: url(/images/artwork/beach.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#hero {
+    padding-top: 160px;
+}
+
+/* FEATURED TOURS SECTION */
+.featuredtours {
+    padding: 16px;
+}
+
+.featuredtours h2 {
+    padding: 16px;
+    text-align: center;
+}
+
+/* COMPANY PROFILE SECTION */
+.company-profile {
+    padding: 16px;
+}
+
+.company-profile h2 {
+    text-align: center;
+    padding: 16px;
+}
+
+.truncated {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+  }

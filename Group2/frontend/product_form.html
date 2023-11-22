@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Travel With Us - Admin Page</title>
+  <link rel="icon" type="image/x-icon" href="/images/artwork/favicon.ico">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+  <!-- TOAST -->
+  <!-- Flexbox container for aligning the toasts -->
+  <div aria-live="polite" aria-atomic="true" class="toast-container p-3 top-10 end-0 position-fixed translate-middle-y">
+    <!-- Then put toasts within -->
+    <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header">
+        <strong class="me-auto">Product Added</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body">
+        The product has been added.
+      </div>
+    </div>
+  </div>
+  <!-- END OF TOAST -->
+
+  <!-- add popup screen on click product image -->
+  <div id="productModal" class="modal fade">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="productModalLabel">Product Details</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <!-- Add content for the product details here -->
+          <div class="row">
+            <div class="col-md-5">
+              <section class="row border border-primary-subtle p-2 mt-1 mx-2 rounded-3 bg-secondary-subtle">
+                <h4 class="py-3 text-center">Product Images</h4>
+                <div class="col-12 p-1 mb-2">
+                  <img id="productImage" class="img-fluid" alt="Product Image" style="height:190px;">
+                </div>
+              </section>
+            </div>
+            <div class="col">
+              <section class="row border border-primary-subtle py-2 me-2 mb-2 mx-0 bg-secondary-subtle rounded-3">
+                <h4 class="ps-2 mt-2 mb-4 py-3 text-center">Tour Package Product Details</h4>
+                <div class="col-9 p-2 mb-3">
+                  <h6>Tour Product Title:</h6>
+                  <p id="productName"></p>
+                </div>
+                <h6>Category:</h6>
+                <p id="productCategory"></p>
+              </div>
+                <div class="row mx-auto mb-3">
+                  <div class="col p-0">
+                    <h6>Tour Price:</h6>
+                    <p id="productPrice"></p>
+                  </div>
+                </div>
+            </div>
+            <div class="col-12">
+              <section class="row border border-primary-subtle py-2 me-2 mb-2 mt-1 ms-2 bg-secondary-subtle rounded-3">
+                <h6>Tour Package Description:</h6>
+                <p id="productDescription"></p>
+            </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end of pop up screen -->
+
+  <!-- NAVIGATION BAR -->
+  <div id="appendHeader"></div>
+  <!-- END OF NAVIGATION BAR -->
+
+  <main class="modal_simulator">
+    <section class="container-fluid mt-5 mb-2 pt-4">
+      <form class="border border-primary-subtle rounded-3"
+        style="border: 1px solid #3d5a80; background-color:cornflowerblue;" id='newForm'>
+        <div class="row p-2 m-2 rounded-3 text-white" style="background-color: #3d5a80; border: 1px solid #3d5a80;">
+          <h2 class="col ps-2">For Admin - Add Tour Package Details</h2>
+        </div>
+        <div class="row">
+
+          <!-- Tour Package Product Details - Start -->
+          <div class="col">
+            <section class="row py-2 mx-2 mb-2 mt-1 bg-primary-subtle rounded-3">
+              <div class="col-3 pt-2">
+                <label for="product_image" class="form-label">
+                  <h6 class="ps-1">Enter image path:</h6>
+                </label>
+                <input type="text" class="form-control" id="product_image" value="images/products/4X3.svg"
+                  style="border: 1px solid #3d5a80;">
+                <div id="helpTextImage" class="form-text pt-1 ps-1">
+                  (e.g. images/products/japan.jpg)
+                </div>
+              </div>
+              <div class="col-5 py-2 mb-4">
+                <label for="title" class="form-label">
+                  <h6 class="ps-1">Tour Product Title:</h6>
+                </label>
+                <input type="text" class="form-control" id="title" value="Amazing Amazon" maxlength="50"
+                  style="border: 1px solid #3d5a80;" required>
+                <div id="helpTextTitle" class="form-text pt-1 ps-1">
+                  Tour title should be within 50 characters (e.g. Ganbatte Shinjuku)
+                </div>
+              </div>
+              <div class="col-4 py-2 mb-4">
+                <label for="category" class="form-label">
+                  <h6 class="ps-1">Select Category:</h6>
+                </label>
+                <select class="form-select" id="category" style="border: 1px solid #3d5a80;" required>
+                  <!-- Add your category options here -->
+                  <option value="asia">Asia</option>
+                  <option value="america">America</option>
+                  <option value="africa">Africa</option>
+                  <option value="europe">Europe</option>
+                  <option value="oceania">Oceania</option>
+                  <!-- Add more categories as needed -->
+                </select>
+              </div>
+              <!-- <div class="row mb-4 mx-2"> -->
+              <div class="row pe-0 me-0">
+                <div class="col-3 ms-1 mb-4">
+                  <label for="title" class="form-label">
+                    <h6 class="ps-1">Product Image:</h6>
+                  </label>
+                  <img class="rounded-3 border-primary-subtle border border-5" src="/images/products/japan.jpg" alt=""
+                    width="100%" height="110px">
+                  <div id="helpTextTitle" class="form-text pt-1 ps-1" maxlength="100">
+                    Path: images/products/japan.jpg
+                  </div>
+                </div>   
+                <div class="col">
+                  <label for="description" class="form-label">
+                    <h6 class="ps-1">Tour Package Description:</h6>
+                  </label> <textarea class="form-control" id="description" rows="3"
+                    style="border: 1px solid #3d5a80;"></textarea>
+                  <div id="helpTextTitle" class="form-text pt-1 ps-1" maxlength="100">
+                    Tour description should be within 1000 characters.
+                  </div>
+                </div>
+              </div>
+              <div class="row mx-auto mb-4">
+                <div class="col p-0">
+                  <div class="row">
+
+                    <div class="col">
+                      <label for="price" class="form-label">
+                        <h6 class="ps-1">Price:</h6>
+                      </label>
+                      <div class="input-group mb-0 rounded-3" style="border: 1px solid #3d5a80;">
+                        <span class="input-group-text">SGD</span>
+                        <span class="input-group-text">$</span>
+                        <!-- <input id="price" value="1680" step="10" min="0" max="50000" type="number" class="form-control" aria-label="Amount (to the nearest dollar)"> -->
+                        <input id="price" type="number" class="form-control" aria-label="Amount (to the nearest dollar)"
+                          required>
+                        <span class="input-group-text">.00 SGD</span>
+                      </div>
+                      <div id="helpTextPrice" class="form-text pt-1 ps-1">
+                        Tour package pricing.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row mx-auto mb-2">
+                <div class="col-6">
+                  <div class="input-group ps-0">
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="row">
+                    <div class="col-2"></div>
+                    <button type="button" class="btn btn-sm btn-outline-primary col-4"
+                      onclick="document.getElementById('newForm').reset()">Clear all</button>
+                    <div class="col-2"></div>
+                    <button id='submit' type="submit" class="btn btn-sm btn-success col-4">Save</button>
+                    <button id='update' type="update" class="btn btn-sm btn-warning col-4">Save Edit</button>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+        <!-- Tour Package Product Details - End -->
+        <div class="row border border-primary-subtle p-2 m-2 rounded-3 bg-white">
+          <div class="col">
+            <table class="table list mt-3 rounded-3" id="storeList">
+              <thead>
+                <tr>
+                  <th scope="col" class="py-2 bg-primary-subtle rounded-start">Id</th>
+                  <th scope="col" class="py-2 bg-primary-subtle">Image</th>
+                  <th scope="col" class="py-2 bg-primary-subtle">Title</th>
+                  <th scope="col" class="py-2 bg-primary-subtle">Description</th>
+                  <th scope="col" class="py-2 bg-primary-subtle">Price</th>
+                  <th scope="col" class="py-2 bg-primary-subtle">Category</th>
+                  <th scope="col" class="py-2 bg-primary-subtle rounded-end">Action</th>
+                </tr>
+              </thead>
+          </div>
+          <tbody id="admin"></tbody>
+          </table>
+        </div>
+      </form>
+    </section>
+
+  </main>
+
+  <!-- FOOTER SITE MAP AND CONTACT US -->
+  <footer id="footer" class="container-fluid"></footer>
+  <!--END OF FOOTER-->
+
+  <script src="/js/common/bootstrap.bundle.min.js"></script>
+  <script src="/js/common/header.js"></script>
+  <script src="/js/common/footer.js"></script>
+  <script src="/js/itemsController.js"></script>
+  <script src="/js/form.js"></script>
+</body>
+
+</html>
