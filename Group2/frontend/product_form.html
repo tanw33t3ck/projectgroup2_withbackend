@@ -45,7 +45,7 @@
               <section class="row border border-primary-subtle p-2 mt-1 mx-2 rounded-3 bg-secondary-subtle">
                 <h4 class="py-3 text-center">Product Images</h4>
                 <div class="col-12 p-1 mb-2">
-                  <img id="productImage" class="img-fluid" alt="Product Image" style="height:190px;">
+                  <img id="productImage" class="img-fluid" alt="Product Image" style="height:260px;">
                 </div>
               </section>
             </div>
@@ -56,9 +56,12 @@
                   <h6>Tour Product Title:</h6>
                   <p id="productName"></p>
                 </div>
+                <div class="row mx-auto mb-2">
+                  <div class="col p-0">
                 <h6>Category:</h6>
                 <p id="productCategory"></p>
               </div>
+            </div>
                 <div class="row mx-auto mb-3">
                   <div class="col p-0">
                     <h6>Tour Price:</h6>
@@ -100,7 +103,7 @@
                   <h6 class="ps-1">Enter image path:</h6>
                 </label>
                 <input type="text" class="form-control" id="product_image" value="images/products/4X3.svg"
-                  style="border: 1px solid #3d5a80;">
+                  style="border: 1px solid #3d5a80;" oninput="updateImage()">
                 <div id="helpTextImage" class="form-text pt-1 ps-1">
                   (e.g. images/products/japan.jpg)
                 </div>
@@ -135,7 +138,7 @@
                   <label for="title" class="form-label">
                     <h6 class="ps-1">Product Image:</h6>
                   </label>
-                  <img class="rounded-3 border-primary-subtle border border-5" src="/images/products/japan.jpg" alt=""
+                  <img id="preview_image" class="rounded-3 border-primary-subtle border border-5" alt=""
                     width="100%" height="110px">
                   <div id="helpTextTitle" class="form-text pt-1 ps-1" maxlength="100">
                     Path: images/products/japan.jpg

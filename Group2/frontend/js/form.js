@@ -57,7 +57,7 @@ function addAdminData(product) {
         <td><img src=${product.image} style='width:100px; height:100px;'></td>
         <td class="align-middle"><strong>${product.title}</strong></td>
         <td class="align-middle truncated ">${product.description}</td>
-        <td class="align-middle">${product.price}</td>
+        <td class="align-middle">$${product.price}</td>
         <td class="align-middle">${product.category}</td>
         <td class="d-grid">
         <button type="button" class="btn btn-success btn-sm mb-1" data-bs-toggle="modal" data-bs-target="#productModal" data-bs-product-id="${product.id}">View</button>
@@ -159,35 +159,56 @@ async function displayAdminProducts() {
           throw new Error("Failed to fetch products");
         }
         const products = await response.json();
-        // if no products is found
-        if (!products) {
-          const nil = `<h5 style='text-align:center;'>Products are on the way</h5>
-                          <img src='/images/artwork/worker.jpg' class='img-fluid mx-auto d-block mb-3' />`;
-          const productsContainer = document.getElementById("productItems");
-          productsContainer.innerHTML = nil; 
-        } else {
         // Loop through each product and send to addProductCard function to append one after another
           products.forEach((product) => {
             addAdminData(product);
           });
-        }
-      } catch (error) {
+        } catch (error) {
         console.error("Error fetching products:", error.message);
+        }
       }
-}
 
-const productModal = document.getElementById('productModal')
+const productModal = document.getElementById('productModal');
 if (productModal) {
-    productModal.addEventListener('show.bs.modal', event => {
+    productModal.addEventListener('show.bs.modal', async (event) => {
+        // Delay execution to ensure modal content is loaded
         const button = event.relatedTarget;
         const getThisId = button.getAttribute('data-bs-product-id');
-        const thisProduct = productsController.products.find(item => item.id === parseInt(getThisId));
-        productName.innerText = thisProduct.title;
-        productPrice.innerText = thisProduct.price;
-        productImage.src = thisProduct.image;
-        productDescription.innerText = thisProduct.description;
-        productCategory.innerText = thisProduct.category;
-    })
+
+        try {
+            // Fetch the product details from the server
+            const response = await fetch(`http://localhost:8080/${getThisId}`);
+            if (!response.ok) {
+                throw new Error(`Failed to fetch product with id ${id}`);
+            }
+            const product = await response.json();
+
+            const productName = document.getElementById('productName');
+            const productPrice = document.getElementById('productPrice');
+            const productImage = document.getElementById('productImage');
+            const productDescription = document.getElementById('productDescription');
+            const productCategory = document.getElementById('productCategory');
+
+            productName.innerText = product.title;
+            productPrice.innerText = `$ ${product.price}`;
+            productImage.src = product.image;
+            productDescription.innerText = product.description;
+            productCategory.innerText = product.category;
+        } catch (error) {
+            console.error("Error fetching product:", error.message);
+        }
+    });
+}
+
+    
+// update image concurrently when user input
+function updateImage() {
+  // Get the input element and the image element
+  const imageInput = document.getElementById('product_image');
+  const previewImage = document.getElementById('preview_image');
+
+  // Set the src attribute of the preview image
+  previewImage.src = imageInput.value;
 }
 
 //call out function
