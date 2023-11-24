@@ -55,20 +55,30 @@
   <script src="/js/common/footer.js"></script>
   <script>
     function validateLogin() {
-      var username = document.getElementById('username').value;
-      var password = document.getElementById('password').value;
+    var username = document.getElementById('username').value;
+    var password = document.getElementById('password').value;
 
-      // Simple validation
-      if (username === 'allan' && password === '1234') {
+    // Define an array of users
+    var users = [
+      {name: 'allan', password: '1234'},
+      {name: 'joshua', password: '5678'},
+      {name: 'weeteck', password: '2468'},
+      {name: 'martin', password: '1357'}
+    ];
+
+    // Check if the entered username and password match any user in the array
+    for (var i = 0; i < users.length; i++) {
+      if (username === users[i].name && password === users[i].password) {
         alert('Login successful!');
-        // Set session variable to indicate the user is logged in
         sessionStorage.setItem('loggedIn', 'true');
-        // Redirect to the product_form.html page
         window.location.href = 'product_form.html';
-      } else {
-        alert('Invalid username or password. Please try again.');
+        return;
       }
     }
+
+    // If no match is found, show an error message
+    alert('Invalid username or password. Please try again.');
+  }
   </script>
 </body>
 
