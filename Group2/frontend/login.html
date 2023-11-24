@@ -71,6 +71,8 @@
       if (username === users[i].name && password === users[i].password) {
         alert('Login successful!');
         sessionStorage.setItem('loggedIn', 'true');
+        var usernameProperCase = username.charAt(0).toUpperCase() + username.slice(1);
+        sessionStorage.setItem('username', usernameProperCase);
         window.location.href = 'product_form.html';
         return;
       }
