@@ -23,6 +23,7 @@ footer.innerHTML = `
             </div>
             <div class="col">
             <li><a href="/about.html">About us</a></li>
+            <li><a href="/login.html">Admin Login</a></li>
             </div>
         </div>
         </ul>

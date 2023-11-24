@@ -200,7 +200,6 @@ if (productModal) {
     });
 }
 
-    
 // update image concurrently when user input
 function updateImage() {
   // Get the input element and the image element
@@ -210,6 +209,11 @@ function updateImage() {
   // Set the src attribute of the preview image
   previewImage.src = imageInput.value;
 }
+// Check if the user is logged in
+if (sessionStorage.getItem('loggedIn') !== 'true') {
+  // Redirect to the login page if not logged in
+  window.location.href = 'login.html';
+  }
 
 //call out function
 displayAdminProducts()

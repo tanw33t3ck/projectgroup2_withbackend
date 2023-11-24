@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -25,7 +25,7 @@
         <h1 class="text-center m-5">Login to your account</h1>
         <div class="m-4">
           <label for="username" class="form-label">Username: </label>
-          <input type="email" class="form-control" id="username">
+          <input type="text" class="form-control" id="username">
           <div id="username" class="form-text">We'll never share your email with anyone else.</div>
         </div>
         <div class="m-4">
@@ -37,9 +37,9 @@
           <label class="form-check-label" for="exampleCheck1">Remember me</label>
         </div>
         <div class="m-4 d-grid">
-          <button type="submit" class="btn btn-primary">Submit</button>
+          <button type="button" class="btn btn-primary" onclick="validateLogin()">Submit</button>
           <div id="register" class="form-text my-3 text-center">
-            <h6>No account? <a href="#">Click here to register an account with us.</a></h6>
+            <h6>For admin only</h6>
           </div>
         </div>
       </form>
@@ -53,6 +53,23 @@
   <script src="/js/common/bootstrap.bundle.min.js"></script>
   <script src="/js/common/header.js"></script>
   <script src="/js/common/footer.js"></script>
+  <script>
+    function validateLogin() {
+      var username = document.getElementById('username').value;
+      var password = document.getElementById('password').value;
+
+      // Simple validation
+      if (username === 'allan' && password === '1234') {
+        alert('Login successful!');
+        // Set session variable to indicate the user is logged in
+        sessionStorage.setItem('loggedIn', 'true');
+        // Redirect to the product_form.html page
+        window.location.href = 'product_form.html';
+      } else {
+        alert('Invalid username or password. Please try again.');
+      }
+    }
+  </script>
 </body>
 
 </html>
