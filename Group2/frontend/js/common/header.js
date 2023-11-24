@@ -30,7 +30,7 @@ let navbarTemplate = `
                 <a href="/product_form.html" class="nav-link"><i class="bi-award-fill"></i>Admin</a>
               </li>
               <li class="nav-item">
-              <span class="nav-link">Hello Allan</span>
+              <span class="nav-link">Hello ${sessionStorage.getItem('username')}</span>
             </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#" onclick="logout()"><i class="bi bi-box-arrow-right"></i>Logout</a>
