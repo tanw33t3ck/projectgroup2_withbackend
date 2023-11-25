@@ -1,5 +1,6 @@
 package com.tour.controller;
 
+import com.tour.exception.ResourceNotFoundException;
 import com.tour.model.Tour;
 import com.tour.repository.TourRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,14 +12,15 @@ import org.springframework.web.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+
 @CrossOrigin(origins = "http://127.0.0.1:3000/")
 @Controller
 @RequestMapping(path="/")
 public class TourController {
+
     @Autowired
     private TourRepository tourRepository;
 
-    //Map POST request
     @PostMapping(path = "/add")
     public ResponseEntity<Object> addNewTour(@RequestBody Tour newTour) {
         try {
@@ -28,51 +30,57 @@ public class TourController {
             return new ResponseEntity<>("Error creating tour: " + e.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
-    //Get all users
+
     @GetMapping(path="/all")
     public ResponseEntity<Object> getAllTours() {
-        List<Tour> users = new ArrayList<>();
-        users = (List<Tour>) tourRepository.findAll();
+        List<Tour> tours = (List<Tour>) tourRepository.findAll();
 
-        if(users.isEmpty()){
-            return new ResponseEntity<>("No users found",HttpStatus.BAD_REQUEST);
-        }else{
-            return new ResponseEntity<>(users,HttpStatus.OK);
+        if(tours.isEmpty()){
+            return new ResponseEntity<>("No tours found", HttpStatus.BAD_REQUEST);
+        } else {
+            return new ResponseEntity<>(tours, HttpStatus.OK);
         }
     }
-    //Get Single User
+
     @GetMapping(path="/{id}")
-    public ResponseEntity<Object> getSingleUser(@PathVariable("id") Integer id){
+    public ResponseEntity<Object> getSingleTour(@PathVariable("id") Integer id) {
         Optional<Tour> tour = tourRepository.findById(id);
-        if(tour.isPresent()) {
-            return new ResponseEntity<>(tourRepository.findById(id), HttpStatus.OK);
+
+        if (tour.isPresent()) {
+            return new ResponseEntity<>(tour.get(), HttpStatus.OK);
+        } else {
+            return new ResponseEntity<>("No tour found", HttpStatus.NOT_FOUND);
         }
-        return new ResponseEntity<>("No user found", HttpStatus.BAD_REQUEST);
     }
-    //Update User
+
     @PutMapping("/{id}")
-    public ResponseEntity<Object>  updateUser(@PathVariable("id") Integer id, @RequestBody Tour updatedTour) {
-        try{
-            Tour existingTour = tourRepository.findById(id).orElse(null);
+    public ResponseEntity<Object> updateUser(@PathVariable("id") Integer id, @RequestBody Tour updatedTour) {
+        try {
+            Tour existingTour = tourRepository.findById(id)
+                    .orElseThrow(() -> new ResourceNotFoundException(id));
+
             existingTour.setImage(updatedTour.getImage());
             existingTour.setTitle(updatedTour.getTitle());
             existingTour.setDescription(updatedTour.getDescription());
             existingTour.setPrice(updatedTour.getPrice());
             existingTour.setCategory(updatedTour.getCategory());
+
             tourRepository.save(existingTour);
-            return new ResponseEntity<>("User updated successfully", HttpStatus.OK);
-        }catch(Exception e){
-            return new ResponseEntity<>("User is not found", HttpStatus.BAD_REQUEST);
+            return new ResponseEntity<>("Tour updated successfully", HttpStatus.OK);
+        } catch (ResourceNotFoundException e) {
+            return new ResponseEntity<>(e.getMessage(), HttpStatus.NOT_FOUND);
+        } catch (Exception e) {
+            return new ResponseEntity<>("Error updating tour: " + e.getMessage(), HttpStatus.BAD_REQUEST);
         }
     }
-    //Delete User
+
     @DeleteMapping("/{id}")
-    public ResponseEntity<Object> delete(@PathVariable("id") Integer id) {
+    public ResponseEntity<Object> deleteTour(@PathVariable("id") Integer id) {
         try {
             tourRepository.deleteById(id);
-            return new ResponseEntity<>("User deleted successfully", HttpStatus.OK);
-        }catch(Exception e){
-            return new ResponseEntity<>("User not found", HttpStatus.BAD_REQUEST);
+            return new ResponseEntity<>("Tour deleted successfully", HttpStatus.OK);
+        } catch (Exception e) {
+            return new ResponseEntity<>("Error deleting tour: " + e.getMessage(), HttpStatus.BAD_REQUEST);
         }
     }
 }
