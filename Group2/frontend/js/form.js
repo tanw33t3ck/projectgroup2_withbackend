@@ -154,7 +154,6 @@ async function displayAdminProducts() {
     try {
         // Fetch from backend
         const response = await fetch("http://localhost:8080/all");
-    
         if (!response.ok) {
           throw new Error("Failed to fetch products");
         }

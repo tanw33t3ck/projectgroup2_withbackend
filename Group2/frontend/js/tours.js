@@ -88,20 +88,28 @@ document.querySelector(".btn-close").addEventListener("click", function () {
   productModal.style.display = "none";
 });
 
-document.getElementById('emailForm').addEventListener('submit', function(event) {
-  event.preventDefault(); 
-  var email = document.getElementById('email').value;
-  // regqx to check for email
-  var regex = /^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/;
-  if (!regex.test(email)) {
-    return alert('Email is not valid')
-  } else {
+// document.getElementById('emailForm').addEventListener('submit', function(event) {
+//   event.preventDefault(); 
+//   var email = document.getElementById('email').value;
+//   // regqx to check for email
+//   var regex = /^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/;
+//   if (!regex.test(email)) {
+//     return alert('Email is not valid')
+//   } else {
 
-  alert('email had been sent')
-  window.location.reload()
-  }
-});
+//   alert('email had been sent')
+//   window.location.reload()
+//   }
+// });
+function updateSubject() {
+  // Get values from the modal
+  var productName = document.getElementById('productName').innerText;
+  var productPrice = document.getElementById('productPrice').innerText;
 
+  // Update the subject value in the form
+  document.getElementById('productTitle').value = productName;
+  document.getElementById('productCost').value = productPrice;
+}
 function filterProducts() {
   const selectedCategory = document.getElementById("categoryFilter").value;
   const productsContainer = document.getElementById("list-products");

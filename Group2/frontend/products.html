@@ -57,20 +57,41 @@
                 <p id="productDescription"></p>
             </div>
             </section>
-            <div>
-              <p>To book this package kindly submit a query and we will get back to you shortly.</p>
+            <!--Start of user submission form section-->
+            <div class="container" style="text-align: center;">
+              <h6>Kindly fill up form to express your interest and we will get back to you soonest!</h6>
+              <form action="https://formsubmit.co/alphaallan@hotmail.com" method="POST" onsubmit="updateSubject();">
+                <div class="form-group">
+                  <div class="form-row">
+                    <input type="hidden" id="productTitle" name="Product Title" value="Tour Name">
+                    <input type="hidden" id="productCost" name="Product Price" value="Tour Price">
+                    <div class="col-3" style="display: inline-block; margin-right: 10px;">
+                      <input type="text" name="Customer Name" class="form-control" placeholder="Full Name"
+                        title="Please do not include special characters" required>
+                    </div>
+                    <div class="col-4" style="display: inline-block; margin-right: 10px;">
+                      <input type="email" name="email" class="form-control" placeholder="Email Address" required>
+                    </div>
+                    <div class="col-4" style="display: inline-block; margin-right: 10px;">
+                      <input type="text" name="Customer Phone Number" class="form-control"
+                        title="Please enter valid phone number without + and spacing" placeholder="Phone Number"
+                        pattern="[1-9][0-9]{5,7}" required>
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <textarea class="col-11 mt-3 form-control" placeholder="Your Message" name="Message From Customer"
+                      title="Please do not include special characters" rows="5" required></textarea>
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-lg btn-dark mt-3">Submit Form</button>
+                <!-- <input type="hidden" name="_captcha" value="false"> -->
+                <input type="hidden" name="_subject" id="_subject" value="New Equiry!">
+                <input type="hidden" name="_next" value="http://127.0.0.1:3000/products.html">
+                <input type="hidden" name="_template" value="box">
+                <input type="hidden" name="_autoresponse" value="Thank you for your enquiry">
+              </form>
             </div>
-            <form id="emailForm" style="display: flex; flex-direction: row; justify-content: space-between; align-items: center;">
-              <div>
-                  <label for="firstName">Name:</label>
-                  <input type="text" id="firstName" name="FirstName">
-              </div>
-              <div>
-                  <label for="email">Email:</label>
-                  <input type="text" id="email" name="Email">
-              </div>
-              <input type="submit" name="submit" value="Submit">
-          </form>
+            <!--End of user submission form section-->
           </div>
         </div>
       </div>
