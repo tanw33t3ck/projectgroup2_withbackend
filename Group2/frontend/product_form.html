@@ -100,12 +100,12 @@
             <section class="row py-2 mx-2 mb-2 mt-1 bg-primary-subtle rounded-3">
               <div class="col-3 pt-2">
                 <label for="product_image" class="form-label">
-                  <h6 class="ps-1">Enter image path:</h6>
+                  <h6 class="ps-1">Image path:</h6>
                 </label>
                 <input type="text" class="form-control" id="product_image" value="images/products/4X3.jpg"
                   style="border: 1px solid #3d5a80;" oninput="updateImage()">
                 <div id="helpTextImage" class="form-text pt-1 ps-1">
-                  (e.g. images/products/japan.jpg)
+<!--                   (e.g. images/products/japan.jpg) -->
                 </div>
               </div>
               <div class="col-5 py-2 mb-4">
@@ -115,7 +115,7 @@
                 <input type="text" class="form-control" id="title" maxlength="50"
                   style="border: 1px solid #3d5a80;" required>
                 <div id="helpTextTitle" class="form-text pt-1 ps-1">
-                  Tour title should be within 50 characters (e.g. Ganbatte Shinjuku)
+<!--                   Tour title should be within 50 characters (e.g. Ganbatte Shinjuku) -->
                 </div>
               </div>
               <div class="col-4 py-2 mb-4">
@@ -141,7 +141,7 @@
                   <img id="preview_image" class="rounded-3 border-primary-subtle border border-5" alt=""
                     width="100%" height="110px">
                   <div id="helpTextTitle" class="form-text pt-1 ps-1" maxlength="100">
-                    Path: images/products/japan.jpg
+<!--                     Path: images/products/japan.jpg -->
                   </div>
                 </div>   
                 <div class="col">
@@ -205,9 +205,9 @@
                   <th scope="col" class="py-2 bg-primary-subtle rounded-start">Id</th>
                   <th scope="col" class="py-2 bg-primary-subtle">Image</th>
                   <th scope="col" class="py-2 bg-primary-subtle">Title</th>
-                  <th scope="col" class="py-2 bg-primary-subtle">Description</th>
-                  <th scope="col" class="py-2 bg-primary-subtle">Price</th>
-                  <th scope="col" class="py-2 bg-primary-subtle">Category</th>
+                  <th scope="col" class="d-none d-md-table-cell py-2 bg-primary-subtle">Description</th>
+                  <th scope="col" class="d-none d-md-table-cell py-2 bg-primary-subtle">Price</th>
+                  <th scope="col" class="d-none d-md-table-cell py-2 bg-primary-subtle">Category</th>
                   <th scope="col" class="py-2 bg-primary-subtle rounded-end">Action</th>
                 </tr>
               </thead>
