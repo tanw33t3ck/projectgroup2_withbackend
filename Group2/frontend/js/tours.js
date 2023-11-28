@@ -11,7 +11,7 @@ function addProductCard(product) {
         data-product-title="${product.title}" data-product-description="${product.description}" 
         data-product-price="${product.price}" data-product-category="${product.category}">
       <div class="card-body">
-        <h3 class="card-title">${product.title}</h3>
+        <h5 class="card-title">${product.title}</h5>
         <p>${product.category}</p>
         <p class="card-text truncated">${product.description}</p>
         <p class="card-text">$ ${product.price}</p>
