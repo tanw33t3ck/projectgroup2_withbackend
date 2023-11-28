@@ -59,10 +59,10 @@ function addAdminData(product) {
         <td class="d-none d-md-table-cell align-middle truncated ">${product.description}</td>
         <td class="d-none d-md-table-cell align-middle">$${product.price}</td>
         <td class="d-none d-md-table-cell align-middle">${product.category}</td>
-        <td class="d-grid">
-        <button type="button" class="btn btn-success btn-sm mb-1" data-bs-toggle="modal" data-bs-target="#productModal" data-bs-product-id="${product.id}">View</button>
-        <button class="btn btn-warning btn-sm mb-1" type="button" onclick="editProduct(${product.id})">Edit</button>
-        <button class="btn btn-danger btn-sm" type="button" onclick="confirmDelete(${product.id})">Delete</button>
+        <td class="d-column">
+        <button type="button" style = "width: 100px;" class="btn btn-success btn-sm mb-1" data-bs-toggle="modal" data-bs-target="#productModal" data-bs-product-id="${product.id}">View</button>
+        <button class="btn btn-warning btn-sm mb-1" style = "width: 100px;" type="button" onclick="editProduct(${product.id})">Edit</button>
+        <button class="btn btn-danger btn-sm" style = "width: 100px;" type="button" onclick="confirmDelete(${product.id})">Delete</button>
         </td>
         `
     const productsContainer = document.getElementById("admin")
