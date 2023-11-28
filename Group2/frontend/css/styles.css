@@ -177,4 +177,23 @@ main {
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;
+}
+.image-container {
+    position: relative;
+  }
+
+  .hover-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    background-color: white; 
+    padding: 10px;
+    border-radius: 5px; 
+    transition: opacity 0.5s ease;
+  }
+
+  .card-img-top:hover + .hover-text {
+    opacity: 1;
   }
