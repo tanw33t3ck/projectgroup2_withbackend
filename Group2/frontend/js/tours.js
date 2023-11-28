@@ -10,18 +10,14 @@ function addProductCard(product) {
         data-bs-toggle="modal" data-bs-target="#productModal" 
         data-product-title="${product.title}" data-product-description="${product.description}" 
         data-product-price="${product.price}" data-product-category="${product.category}">
+        <p class="hover-text">Click on image to enqure</p>
+        <p><i>Click on image to enquiry</i></p>
       <div class="card-body">
         <h5 class="card-title">${product.title}</h5>
         <p>${product.category}</p>
         <p class="card-text truncated">${product.description}</p>
         <div style="display: flex; justify-content: space-between; align-items: center;">
           <p class="card-text">$ ${product.price}</p>
-          <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#productModal" 
-            src="${product.image}"
-            data-product-title="${product.title}" data-product-description="${product.description}" 
-            data-product-price="${product.price}" data-product-category="${product.category}">
-            More Info
-          </button>
         </div>
       </div>
     </div>
@@ -66,7 +62,7 @@ async function displayProducts() {
 
 // Add an event listener to the document to listen for clicks on product images.
 document.addEventListener("click", function (event) {
-  if (event.target && (event.target.matches(".card-img-top") || event.target.matches(".btn-dark"))) {
+  if (event.target && (event.target.matches(".card-img-top"))) {
     const productModal = document.getElementById("productModal");
     const productImage = document.getElementById("productImage");
     const productName = document.getElementById("productName");
@@ -96,19 +92,6 @@ document.querySelector(".btn-close").addEventListener("click", function () {
   productModal.style.display = "none";
 });
 
-// document.getElementById('emailForm').addEventListener('submit', function(event) {
-//   event.preventDefault(); 
-//   var email = document.getElementById('email').value;
-//   // regqx to check for email
-//   var regex = /^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/;
-//   if (!regex.test(email)) {
-//     return alert('Email is not valid')
-//   } else {
-
-//   alert('email had been sent')
-//   window.location.reload()
-//   }
-// });
 function updateSubject() {
   // Get values from the modal
   var productName = document.getElementById('productName').innerText;
@@ -135,7 +118,6 @@ function filterProducts() {
     addProductCard(product);
   });
 }
-
 
 displayProducts()
 
