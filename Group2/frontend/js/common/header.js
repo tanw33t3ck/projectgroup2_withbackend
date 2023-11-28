@@ -20,7 +20,7 @@ let navbarTemplate = `
                 <a class="nav-link pe-4" href="/index.html"><i class="bi bi-house pe-1"></i>Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link pe-4" href="/products.html"><i class="bi bi-airplane pe-1"></i>Tour Packages</a>
+                <a class="nav-link pe-4" href="/products.html"><i class="bi bi-airplane pe-1"></i>Tour</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="/about.html"><i class="bi bi-balloon-heart"></i></i>About Us</a>
