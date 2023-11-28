@@ -56,9 +56,9 @@ function addAdminData(product) {
         <td>${product.id}</td>
         <td><img src=${product.image} style='width:100px; height:100px;'></td>
         <td class="align-middle"><strong>${product.title}</strong></td>
-        <td class="align-middle truncated ">${product.description}</td>
-        <td class="align-middle">$${product.price}</td>
-        <td class="align-middle">${product.category}</td>
+        <td class="d-none d-md-table-cell align-middle truncated ">${product.description}</td>
+        <td class="d-none d-md-table-cell align-middle">$${product.price}</td>
+        <td class="d-none d-md-table-cell align-middle">${product.category}</td>
         <td class="d-grid">
         <button type="button" class="btn btn-success btn-sm mb-1" data-bs-toggle="modal" data-bs-target="#productModal" data-bs-product-id="${product.id}">View</button>
         <button class="btn btn-warning btn-sm mb-1" type="button" onclick="editProduct(${product.id})">Edit</button>
