@@ -14,10 +14,18 @@ function addProductCard(product) {
         <h5 class="card-title">${product.title}</h5>
         <p>${product.category}</p>
         <p class="card-text truncated">${product.description}</p>
-        <p class="card-text">$ ${product.price}</p>
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+          <p class="card-text">$ ${product.price}</p>
+          <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#productModal" 
+            src="${product.image}"
+            data-product-title="${product.title}" data-product-description="${product.description}" 
+            data-product-price="${product.price}" data-product-category="${product.category}">
+            More Info
+          </button>
+        </div>
       </div>
     </div>
-  </div>`;
+  </div> `;
 
   const productsContainer = document.getElementById("list-products");
   productsContainer.innerHTML += productHTML;
@@ -58,7 +66,7 @@ async function displayProducts() {
 
 // Add an event listener to the document to listen for clicks on product images.
 document.addEventListener("click", function (event) {
-  if (event.target && event.target.matches(".card-img-top")) {
+  if (event.target && (event.target.matches(".card-img-top") || event.target.matches(".btn-dark"))) {
     const productModal = document.getElementById("productModal");
     const productImage = document.getElementById("productImage");
     const productName = document.getElementById("productName");
