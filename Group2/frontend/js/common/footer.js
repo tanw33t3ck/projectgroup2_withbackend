@@ -19,11 +19,11 @@ footer.innerHTML = `
         <div class="row">
             <div class="col-5">
             <li><a href="/index.html">Home</a></li>
-            <li><a href="/products.html">Products</a></li>
+            <li><a href="/products.html">Tour</a></li>
             </div>
             <div class="col">
             <li><a href="/about.html">About us</a></li>
-            <li><a href="/login.html">Admin Login</a></li>
+            <li><a href="/login.html">Admin</a></li>
             </div>
         </div>
         </ul>
