@@ -56,7 +56,7 @@ function addAdminData(product) {
         <td>${product.id}</td>
         <td><img src=${product.image} style='width:100px; height:100px;'></td>
         <td class="align-middle"><strong>${product.title}</strong></td>
-        <td class="d-none d-md-table-cell align-middle truncated ">${product.description}</td>
+        <td class="d-none d-md-table-cell align-middle badge text-wrap">${product.description}</td>
         <td class="d-none d-md-table-cell align-middle">$${product.price}</td>
         <td class="d-none d-md-table-cell align-middle">${product.category}</td>
         <td class="d-column">
