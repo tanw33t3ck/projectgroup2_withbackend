@@ -8,8 +8,8 @@ footer.innerHTML = `
     <div class="col-7">
         <h6>Contact Us:</h6>
         <ul id="footer_contact" class="list-unstyled">
-        <li><a href="#"><i class="bi bi-envelope pe-1"></i>info@travelwithus.com.sg</a></li>
-        <li><a href="#"><i class="bi bi-telephone pe-1"></i>+65 8888 8888</a></li>
+        <li><a href="mailto:info@travelwithus.com.sg"><i class="bi bi-envelope pe-1"></i>info@travelwithus.com.sg</a></li>
+        <li><i class="bi bi-telephone pe-1"></i>+65 8888 8888</li>
         </ul>
     </div>
     <div class="col-1 col-md-2"></div>
@@ -32,8 +32,8 @@ footer.innerHTML = `
     <div id="footer_mid_bar_space"></div>
     </div>
     <div id="footer_end_bar" class="row sticky-bottom">
-    <div class="col-md-4 text-center text-md-start ">Copyright &copy; 2023 All Rights Reserved</div>
-    <div class="col-md-4 text-center ">Travel With Us Pte. Ltd</div>
+    <div class="col-md-4 text-center text-md-start">Copyright &copy; 2023 All Rights Reserved</div>
+    <div class="col-md-4 text-center"><a href="/index.html">Travel With Us Pte. Ltd</a></div>
 
     </div>
 `
