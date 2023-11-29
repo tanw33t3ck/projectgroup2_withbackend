@@ -9,7 +9,7 @@ let navbarTemplate = `
         style="background-color:#3d5a80;">
         <div class="container-fluid">
           <img id="logo" src="/images/artwork/plane_earth_logo.png" alt="logo">
-          <a class="navbar-brand ps-3" href="#">Travel With Us</a>
+          <a class="navbar-brand ps-3" href="/index.html">Travel With Us</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
