@@ -13,6 +13,8 @@ function addProductCard(product) {
       <div class="card-body">
         <h3 class="card-title">${product.title}</h3>
         <p>${product.category}</p>
+        <p class="hover-text">Click on image to enquire</p>
+        <p><i>Click on image to enquire</i></p>
         <p class="card-text truncated">${product.description}</p>
         <p class="card-text">$ ${product.price}</p>
       </div>
