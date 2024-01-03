@@ -39,7 +39,7 @@ MySQL Database Server for the Persistence Layer
 As this is a team project, we use GitHub for coordinating our work so we work in sync.
 
 Slide 6:
-We use a systemic approach by incorporating GitHub Project as the PM Tool to help us manage our project timeline. 
+We adopt a systemic approach by incorporating GitHub Project as the PM Tool to help us manage our project timeline. 
 
 What you see here is a screenshot of our project management in the RoadMap view. GitHub Project also allow us to arrange our “tasks” into Task List view and Kanban board view. Pause…
 
@@ -54,7 +54,11 @@ Teamwork - By dividing and conquering, we were able to scale down the project to
 
 Communication - Teamwork brings along friction. This is especially true since almost 100% of our course is conducted online. With effective communication, we can reduce that friction and increase the productivity that teamwork can bring. Effective communication = more active listening, less interrupting, accepting feedbacks and making relevant changes.
 
-Future Orientation - We started with a basic plan for our project, setting simple goals and easy wins in the beginning. But with a Growth Mindset, we were not satisfied with our basic prototype, we started to add features like a filter function, adding a databases, responsive design and eventually bringing our web application online. All this while, persistence was our fuel. Errors codes did not deter us, blank pages make us give up, out of shape images only made us try harder. We needed to encourage each other and that was teamwork at its best.
+Future Orientation - We started with a basic plan for our project, setting simple goals and easy wins in the beginning. 
+But with a Growth Mindset, we were not satisfied with our basic prototype, we started to add features like a filter function, adding a databases, responsive design and eventually bringing our web application online. 
+All this while, persistence was our fuel. 
+Errors codes did not deter us, blank pages make us give up, out of shape images only made us try harder. 
+We needed to encourage each other and that was teamwork at its best.
 
 Other BSM not mentioned: Personal Responsibility(MS), Orientation to Detail(BS), Proactiveness(BS), Professionalism and Technical Accuracy 
 
