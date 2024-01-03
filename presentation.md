@@ -1,38 +1,62 @@
-###Introduction
+Slide 1:
+Hi everyone, thank you for this opportunity to allow us to present our Final project. We are group 2 and there are 3 of us. Allan, Joshua and Wee Teck.
 
-n1/n2/n3
-Hi everyone, thank you for this opportunity to allow us to present our Final project. 
-We are group 2 and there are 3 of us. n1, n2, and n3.
+For this presentation, Allan will be the technical support to help us with the hands-on navigation, Wee Teck and Joshua will be doing the presentation.
 
-For this presentation, n1 will be the technical support to help us with the hands-on, n2 and n3 will be doing the presentation.
-
-n1: load presentation slide
+Slide 2:
 The agenda of our presentation is as follows:
-1. Project overview - full stack
-2. 
-3.
-4.
 
-###Project Overview
+First we will have a Project Overview
 
-####Technical Specifications
-Architecture: 3 Tier Layered Architechture
+Next We have AGILE Project Management
+
+Then we will have our Live Demo of our project by Wee Teck.
+He will also be sharing with us on the key takeaways of the Behavioural Skills and Mindset.
+
+Slide 3:
+Our project - Travel With Us, is a B2C web application of a Tour Agency and the products are the Tour Packages. 
+
+This Web Application is designed for 2 groups people we call them users and admin. 
+
+For all users, the primary function of this web app is to display all Tour Packages. 
+On top of that, it also allow users to narrow down the Tour Packages by filtering the destination or category. 
+Users will be able to express interest on a selected product by filling an online form.
+
+Another group of users are Admins. They work for "Travel With us" and have additional access on top of users. 
+Admin users can access a protected webpage upon authentication. This protected webpage allow authenticated Admins to perform operations that can create, read, update and delete Tour Packages. 
+
+Slide 4:
+This is a general navigation structure of our webpage. You can see from here that this admin_form.html requires authentication. 
+
+Slide 5:
+So what technologies used for this project?
+This project is a 3 tier Layered Architecture where we have the Presentation Layer, Application Layer and Persistence Layer.
 HTML, CSS, JavaScript for the Presentation Layer
-Connectivity: JS Fetch API <-> Spring Web API
+Connectivity: JS Fetch API <-> Spring Web (Rest API)
 Spring Boot with Java for the Application Layer
 Connectivity: Spring Data JPA <-> SQL
 MySQL Database Server for the Persistence Layer
+As this is a team project, we use GitHub for coordinating our work so we work in sync.
 
-####Features
-Our project - Travel With Us, is a B2C web application of a Tour Agency and the products are the Tour Packages.
-This Web Application is designed for 2 groups people we call them users and admin.
-For all users, the primary function of this web app is to display all Tour Packages. On top of that, it also allow users to narrow down by destination. Users will be able to express interest on a selected product by filling an online form.
+Slide 6:
+We use a systemic approach by incorporating GitHub Project as the PM Tool to help us manage our project timeline. 
 
-Admins are users too but they work for "Travel With us" and have additional access on top of users. Admins can create, read, update and delete Tour Packages via a webpage that is only accessible upon authentication.
+What you see here is a screenshot of our project management in the RoadMap view. GitHub Project also allow us to arrange our “tasks” into Task List view and Kanban board view. Pause…
 
-####Design Concept
-The Logo:
-Our logo is a plane positioned like an upward trend over a spherical formed by blue and green stripes. This signify that we are motivated and headed for growth and success. The spherical shape is an abstract representation of Earth and the colors represents the Sky and the Sea. 
+Slide 7:
+Finally it is time for our Live Demo. This slide is a preview of our responsive design project in different device/view width. We are now ready for Wee Teck to share with us on how to use the web application.
 
-The color: 
-The header and footer are of the same color to give a consistent look and feel. The color comes from combining the color of Sky Blue and Sea Green.
+Switch to Localhost view ->
+Wee Teck's live demo.
+
+Slide 8:
+Teamwork - By dividing and conquering, we were able to scale down the project to smaller parts, working on them individually. Teamwork also allows us to use our strengths to cover what our teammates may be lacking. One person could be strong in coding, while another could be strong in planning and another could be strong in presentation. 
+
+Communication - Teamwork brings along friction. This is especially true since almost 100% of our course is conducted online. With effective communication, we can reduce that friction and increase the productivity that teamwork can bring. Effective communication = more active listening, less interrupting, accepting feedbacks and making relevant changes.
+
+Future Orientation - We started with a basic plan for our project, setting simple goals and easy wins in the beginning. But with a Growth Mindset, we were not satisfied with our basic prototype, we started to add features like a filter function, adding a databases, responsive design and eventually bringing our web application online. All this while, persistence was our fuel. Errors codes did not deter us, blank pages make us give up, out of shape images only made us try harder. We needed to encourage each other and that was teamwork at its best.
+
+Other BSM not mentioned: Personal Responsibility(MS), Orientation to Detail(BS), Proactiveness(BS), Professionalism and Technical Accuracy 
+
+Slide 9 and 10:
+Give out flyers and Thank you.
